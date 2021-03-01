@@ -54,7 +54,7 @@ weekly_date = time.strftime('%Y.%m.%d',time.localtime(time.time() - 604800))  + 
 
 print weekly_date
 
-all_data= {}
+all_data = {}
 
 for cloudname in {{cloudnames}}:
     cloud = '/tmp/report/' + cloudname + '/tmp/' + cloudname
@@ -84,7 +84,7 @@ context = {
 {% endfor %}
     'tbl_contents': issue_content,
 }
-{% elseif region == 'one_region' %}
+{% elif region == 'one_region' %}
 context = {
     'company_name': u"{{company_name}}",
     'date': weekly_date,
